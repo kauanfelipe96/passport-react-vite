@@ -19,7 +19,7 @@ body {
     height: 300px;
     cursor: pointer;
     backface-visibility: visible;
-    color: #d4af37;
+    color: #C2A042;
 }
 
 .front {
@@ -40,7 +40,7 @@ body {
     font-size: 14px;
     width: 90%;
     line-height: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     margin-top: 10px;
     padding-top: 10px;
 }
@@ -48,7 +48,7 @@ body {
 .front .icon {
     font-size: 25px;
     margin-bottom: 10px;
-    padding-top: 10px;
+    padding-top: 0px;
 }
 
 .front,
@@ -89,7 +89,26 @@ body {
 
 .page1 {
     background: #efefef;
+    position: relative;
+    overflow: hidden;
 }
+
+.page1::before {
+    content: "";
+    position: absolute;
+    top: 28px;
+    left: -70px;
+    width: 160%;
+    height: 75%;
+    background-image: url(../src/assets/aguia.png);
+    background-size: cover;
+    background-position: center;
+    transform: rotate(90deg) scaleX(-1);
+    transform-origin: center;
+    z-index: -1;
+}
+
+
 
 .page2 {
     background: #efefef;
@@ -180,4 +199,30 @@ body {
 
 .pagina h1 {
     margin: 0;
+}
+
+.page1-content,
+.page6-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    color: #333;
+    font-size: 1rem;
+    text-align: center;
+    padding: 10px;
+}
+
+
+.open-page1 .page1-content {
+    transform: rotate(90deg) scaleX(-1);
+    transform-origin: center;
+}
+
+.open-page6 .page6-content {
+    transform: rotate(270deg);
 }
