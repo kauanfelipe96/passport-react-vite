@@ -15,14 +15,12 @@ const Passport: React.FC = () => {
         <div className={`book ${isOpen ? "open-book" : "closed-book"}`} onClick={handleClick}>
             <div className={`back ${isOpen ? "open-back" : "closed-back"}`}></div>
             <div className={`page6 ${isOpen ? "open-page6" : "closed-page6"}`}>
-            <div className="page6-content">
-                </div>
+            <div className="page6-content"></div>
             </div>
             <div className={`page4 ${isOpen ? "open-page4" : "closed-page4"}`}></div>
             <div className={`page2 ${isOpen ? "open-page2" : "closed-page2"}`}></div>
             <div className={`page1 ${isOpen ? "open-page1" : "closed-page1"}`}>
-            <div className="page1-content">
-                </div>
+            <div className="page1-content"></div>
             </div>
             <div className={`front ${isOpen ? "open-front" : "closed-front"}`}>
                 <h1>Passporte</h1>
