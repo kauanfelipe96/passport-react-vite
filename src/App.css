@@ -93,7 +93,7 @@ body {
     overflow: hidden;
 }
 
-.page1::before {
+/* .page1::before {
     content: "";
     position: absolute;
     top: 28px;
@@ -106,12 +106,11 @@ body {
     transform: rotate(90deg) scaleX(-1);
     transform-origin: center;
     z-index: -1;
-}
-
-
+} */
 
 .page2 {
     background: #efefef;
+    overflow: hidden;
 }
 
 .page3 {
@@ -128,6 +127,23 @@ body {
 
 .page6 {
     background: #fdfdfd;
+    overflow: hidden;
+}
+
+.page2::before {
+    content: "";
+    position: absolute;
+    top: 48px;
+    left: -47px;
+    width: 150%;
+    height: 68%;
+    background-image: url(../src/assets/world-map.png);
+    background-size: cover;
+    background-position: center;
+    transform: rotate(-90deg) scaleX(1);
+    transform-origin: center;
+    z-index: -1;
+    opacity: 0.1;
 }
 
 .open-book {
@@ -190,25 +206,14 @@ body {
     transform: rotateY(0deg) scale(1);
 }
 
-.pagina {
-    background-color: red;
-    width: 100%;
-    height: 300px;
-    rotate: 90deg;
-}
-
-.pagina h1 {
-    margin: 0;
-}
-
 .page1-content,
-.page6-content {
+.page2-content {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 140%;
+    height: 93%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
     transform: rotate(-90deg);
     transform-origin: center;
     color: #333;
@@ -223,6 +228,12 @@ body {
     transform-origin: center;
 }
 
-.open-page6 .page6-content {
+.open-page2 .page2-content {
     transform: rotate(270deg);
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
