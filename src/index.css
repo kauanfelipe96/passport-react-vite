@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Dot Matrix';
+    src: url('./assets/DOTMATRI.TTF') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'OCR-A';
+    font-style: normal;
+    font-weight: normal;
+    src: url('./assets/OCR-A.ttf') format('truetype');
+  }
+
+  body {
+    font-family: 'Dot Matrix', 'OCR-A BT', sans-serif;
+  }
+  

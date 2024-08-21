@@ -1,15 +1,35 @@
-import { useState } from 'react'
-import './App.css'
-import Passport from './components/Passport'
+import { useState } from "react";
+import "./App.css";
+import Passport from "./components/Passport";
+import { debugData } from "./utils/debugData";
+import { IPassportData } from "./types";
+import { useNuiEvent } from "./hooks/useNuiEvent";
+
+debugData<boolean | IPassportData>([
+  { action: "passport:setVisible", data: true },
+  {
+    action: "rp_passport:setPassportData",
+    data: {
+      citizenid: "C1231",
+      firstname: "Kauan",
+      lastname: "Felipe",
+      birthdate: 631159200000,
+      nationality: "Brasileiro",
+      gender: 0,
+      city: "Ribeirão Pires",
+      color: "red",
+    },
+  },
+]);
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [passportData, setPassportData] = useState<IPassportData>();
 
-  return (
-    <>
-    <Passport/>
-    </>
-  )
+  useNuiEvent("rp_passport:setPassportData", (data?: IPassportData) => {
+    setPassportData(data);
+  });
+
+  return <>{passportData && <Passport data={passportData} />}</>;
 }
 
-export default App
+export default App;
