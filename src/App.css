@@ -150,7 +150,11 @@ body {
 
 .open-book {
   rotate: 90deg;
+<<<<<<< HEAD
   transition-duration: 1250ms;
+=======
+  transition-duration: 1000ms;
+>>>>>>> c5c56342124dc834458faa4fd8d2da16b9f73edd
 }
 
 .open-front {
@@ -194,7 +198,11 @@ body {
 
 .closed-book {
   rotate: 0deg;
+<<<<<<< HEAD
   transition-duration: 1250ms;
+=======
+  transition-duration: 1000ms;
+>>>>>>> c5c56342124dc834458faa4fd8d2da16b9f73edd
 }
 
 .closed-front,
@@ -212,7 +220,11 @@ body {
 .page2-content {
   position: absolute;
   width: 140%;
+<<<<<<< HEAD
   height: 90%;
+=======
+  height: 93%;
+>>>>>>> c5c56342124dc834458faa4fd8d2da16b9f73edd
   transform: rotate(-90deg);
   transform-origin: center;
   color: #21324b;
@@ -281,6 +293,10 @@ body {
 
 .input label {
   font-size: 7px;
+<<<<<<< HEAD
+=======
+  font-style: italic;
+>>>>>>> c5c56342124dc834458faa4fd8d2da16b9f73edd
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -298,6 +314,7 @@ body {
 }
 
 .signature {
+<<<<<<< HEAD
   font-family: 'Michigan';
   font-size: 20px;
   color: #000000;
@@ -330,4 +347,13 @@ body {
 .logo {
   width: 0px;
   z-index: 1;
+=======
+  font-family: 'Great Vibes', cursive;
+  font-size: 35px;
+  color: #000000;
+  text-decoration: underline;
+  transform: rotate(90deg) scaleX(-1);
+  margin-left: -90%;
+  margin-right: -20%;
+>>>>>>> c5c56342124dc834458faa4fd8d2da16b9f73edd
 }

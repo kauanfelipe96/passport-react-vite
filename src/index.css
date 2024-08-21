@@ -5,6 +5,7 @@
   
   @font-face {
     font-family: 'OCR-A';
+<<<<<<< HEAD
     src: url('./assets/OCR-A.ttf') format('truetype');
   }
 
@@ -18,5 +19,14 @@
 
   body {
     font-family: 'Dot Matrix', 'OCR-A BT', 'Michigan', sans-serif;
+=======
+    font-style: normal;
+    font-weight: normal;
+    src: url('./assets/OCR-A.ttf') format('truetype');
+  }
+
+  body {
+    font-family: 'Dot Matrix', 'OCR-A BT', sans-serif;
+>>>>>>> c5c56342124dc834458faa4fd8d2da16b9f73edd
   }
   

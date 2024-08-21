@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import brasao from "../assets/brasaorprp.png";
+<<<<<<< HEAD
 import avatarf from "../assets/avatar-f.png";
 import avatarm from "../assets/avatar-m.png";
 import logo from "../assets/logo-rprp.png";
@@ -10,12 +11,35 @@ interface IPassportProps {
   data: IPassportData;
 }
 
+=======
+import avatar from "../assets/default-avatar.png";
+import { TbEPassport } from "react-icons/tb";
+import { IPassportData } from "../types";
+
+
+interface IPassportProps {
+  data: IPassportData;
+}
+
+>>>>>>> c5c56342124dc834458faa4fd8d2da16b9f73edd
 const Passport: React.FC<IPassportProps> = ({ data }) => {
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
 
+<<<<<<< HEAD
+=======
+  // const Signature: React.FC<IPassportProps> = ({ data }) => {
+  //   return (
+  //     <div className="signature">
+  //       {data.firstname} {data.lastname}
+  //     </div>
+  //   );
+  // };
+  
+
+>>>>>>> c5c56342124dc834458faa4fd8d2da16b9f73edd
   return (
     <>
       <div
@@ -27,10 +51,14 @@ const Passport: React.FC<IPassportProps> = ({ data }) => {
           <div className="page2-content">
             <h1>INTERNATIONAL PASSPORT</h1>
             <div className="page2-container">
+<<<<<<< HEAD
               <div className="logo">
                 <img src={logo} width={80} />
               </div>
               <img src={data.gender === 0 ? avatarm : avatarf} width={100} />
+=======
+              <img src={avatar} width={100} />
+>>>>>>> c5c56342124dc834458faa4fd8d2da16b9f73edd
               <div className="input-container">
                 <div className="input-end">
                   <div className="input">
@@ -70,6 +98,7 @@ const Passport: React.FC<IPassportProps> = ({ data }) => {
           <div className="page1-content">
             <h1>{data.citizenid}</h1>
           </div>
+<<<<<<< HEAD
           <div className="signature-container">
             <div className="signature">
               {data.firstname} {data.lastname}
@@ -77,6 +106,9 @@ const Passport: React.FC<IPassportProps> = ({ data }) => {
             <div className="signature-line"></div>
             <div className="signature-text">Signature of Bearer</div>
           </div>
+=======
+          <div className="signature">{data.firstname} {data.lastname}</div>
+>>>>>>> c5c56342124dc834458faa4fd8d2da16b9f73edd
         </div>
         <div className={`front ${isOpen ? "open-front" : "closed-front"}`}>
           <h1>Passport</h1>
