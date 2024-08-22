@@ -15,18 +15,32 @@ const Passport: React.FC<IPassportProps> = ({ data }) => {
     setIsOpen(!isOpen);
   };
 
+  const changeColor = () => {
+    const colors = {
+      red: { background: "linear-gradient(90deg, rgb(211 73 73) 80%, rgb(121 31 31) 100%)" },
+      blue: { background: "linear-gradient(90deg, rgba(33, 50, 75, 1) 80%, rgba(20, 33, 52, 1) 100%)" },
+      gray: { background: "linear-gradient(90deg, rgba(50,52,55,1) 80%, rgba(19,22,27,1) 100%)" },
+      purple: { background: "linear-gradient(90deg, rgba(91,33,176,1) 80%, rgba(46,16,96,1) 100%)" },
+      black: { background: "linear-gradient(90deg, rgba(13,13,13,1) 80%, rgba(0,0,0,1) 100%)" },
+      beige: { background: "linear-gradient(90deg, rgba(245,245,220,1) 80%, rgba(184,184,122,1) 100%)" },
+      green: { background: "linear-gradient(90deg, rgba(19,121,63,1) 80%, rgba(3,59,27,1) 100%)" },
+    };
+  
+    return colors[data.color as keyof typeof colors] || {}; 
+  };
+
   return (
     <>
       <div
         className={`book ${isOpen ? "open-book" : "closed-book"}`}
         onClick={handleClick}
       >
-        <div className={`back ${isOpen ? "open-back" : "closed-back"}`}></div>
+        <div className={`back ${isOpen ? "open-back" : "closed-back"}`} ></div>
         <div className={`page2 ${isOpen ? "open-page2" : "closed-page2"}`}>
           <div className="page2-content">
             <h1>INTERNATIONAL PASSPORT</h1>
             <div className="page2-container">
-              <img src={data.gender === 0 ? avatarf : avatarm} width={100} />
+              <img src={data.gender === 0 ? avatarm : avatarf} width={100} />
               <div className="input-container">
                 <div className="input-end">
                   <div className="input">
@@ -74,7 +88,7 @@ const Passport: React.FC<IPassportProps> = ({ data }) => {
             <div className="signature-text">Signature of Bearer</div>
           </div>
         </div>
-        <div className={`front ${isOpen ? "open-front" : "closed-front"}`}>
+        <div className={`front ${isOpen ? "open-front" : "closed-front"}`} style={changeColor()}>
           <h1>Passport</h1>
           <img src={brasao} width={150} />
           <h2>{data.city}</h2>

@@ -67,12 +67,6 @@ body {
 }
 
 .front,
-.back {
-  background: #21324b;
-  background: linear-gradient(90deg,rgba(33, 50, 75, 1) 80%,rgba(20, 33, 52, 1) 100%);
-}
-
-.front,
 .back,
 .page1,
 .page2 {
@@ -218,9 +212,8 @@ body {
   flex-direction: column;
   align-items: flex-start;
   width: 35%;
-
 }
-z z
+
 .input-end {
   display: flex;
   align-items: flex-end;
@@ -257,7 +250,7 @@ z z
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 112px;
+  margin-top: 108px;
   margin-right: 20px;
   transform: rotate(90deg) scaleX(-1);
 }
