@@ -32,15 +32,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.front h1 {
+.front h1, .front h2 {
   font-size: 15px;
   font-weight: 600;
 }
 
 .front h2 {
-  font-size: 15px;
   width: 90%;
-  font-weight: 600;
   margin-bottom: 5px;
   margin-top: 10px;
   padding-top: 10px;

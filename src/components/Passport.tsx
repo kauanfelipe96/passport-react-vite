@@ -11,6 +11,7 @@ interface IPassportProps {
 
 const Passport: React.FC<IPassportProps> = ({ data }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const defaultColor = "linear-gradient(90deg, rgba(13,13,13,1) 80%, rgba(0,0,0,1) 100%)";
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
@@ -31,7 +32,7 @@ const Passport: React.FC<IPassportProps> = ({ data }) => {
       },
       purple: {
         background:
-          "linear-gradient(90deg, rgba(91,33,176,1) 80%, rgba(46,16,96,1) 100%)",
+        "linear-gradient(90deg, rgba(59,7,100,1) 80%, rgba(24,2,41,1) 100%)",
       },
       black: {
         background:
@@ -44,10 +45,12 @@ const Passport: React.FC<IPassportProps> = ({ data }) => {
       green: {
         background:
           "linear-gradient(90deg, rgba(19,121,63,1) 80%, rgba(3,59,27,1) 100%)",
+        color:
+        "#e2e2e2",
       },
     };
 
-    return colors[data.color as keyof typeof colors] || {};
+    return colors[data.color as keyof typeof colors] || { background: defaultColor };
   };
 
   return (
@@ -56,7 +59,7 @@ const Passport: React.FC<IPassportProps> = ({ data }) => {
         className={`book ${isOpen ? "open-book" : "closed-book"}`}
         onClick={handleClick}
       >
-        <div className={`back ${isOpen ? "open-back" : "closed-back"}`}></div>
+        <div className={`back ${isOpen ? "open-back" : "closed-back"}`} style={changeColor()}></div>
         <div className={`page2 ${isOpen ? "open-page2" : "closed-page2"}`}>
           <div className="page2-content">
             <h1>INTERNATIONAL PASSPORT</h1>

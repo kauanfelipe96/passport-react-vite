@@ -17,7 +17,7 @@ debugData<boolean | IPassportData>([
       nationality: "Brasileiro",
       gender: 0,
       city: "Ribeirão Pires",
-      color: "black",
+      color: "pink",
     },
   },
 ]);
