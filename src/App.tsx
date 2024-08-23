@@ -11,8 +11,8 @@ debugData<boolean | IPassportData>([
     action: "rp_passport:setPassportData",
     data: {
       citizenid: "C12324",
-      firstname: "Florisvaldo",
-      lastname: "Shaolin",
+      firstname: "Kauan",
+      lastname: "Felipe",
       birthdate: 631159200000,
       nationality: "Brasileiro",
       gender: 0,

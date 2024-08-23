@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import brasao from "../assets/brasaorprp.png";
-import avatarf from "../assets/avatar-f.png";
-import avatarm from "../assets/avatar-m.png";
+import woman from "../assets/woman.png";
+import man from "../assets/man.png";
 import { TbEPassport } from "react-icons/tb";
 import { IPassportData } from "../types";
 
@@ -11,7 +11,8 @@ interface IPassportProps {
 
 const Passport: React.FC<IPassportProps> = ({ data }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const defaultColor = "linear-gradient(90deg, rgba(13,13,13,1) 80%, rgba(0,0,0,1) 100%)";
+  const defaultColor =
+    "linear-gradient(90deg, rgba(13,13,13,1) 80%, rgba(0,0,0,1) 100%)";
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
@@ -32,7 +33,7 @@ const Passport: React.FC<IPassportProps> = ({ data }) => {
       },
       purple: {
         background:
-        "linear-gradient(90deg, rgba(59,7,100,1) 80%, rgba(24,2,41,1) 100%)",
+          "linear-gradient(90deg, rgba(59,7,100,1) 80%, rgba(24,2,41,1) 100%)",
       },
       black: {
         background:
@@ -45,12 +46,13 @@ const Passport: React.FC<IPassportProps> = ({ data }) => {
       green: {
         background:
           "linear-gradient(90deg, rgba(19,121,63,1) 80%, rgba(3,59,27,1) 100%)",
-        color:
-        "#e2e2e2",
+        color: "#e2e2e2",
       },
     };
 
-    return colors[data.color as keyof typeof colors] || { background: defaultColor };
+    return (
+      colors[data.color as keyof typeof colors] || { background: defaultColor }
+    );
   };
 
   return (
@@ -59,22 +61,25 @@ const Passport: React.FC<IPassportProps> = ({ data }) => {
         className={`book ${isOpen ? "open-book" : "closed-book"}`}
         onClick={handleClick}
       >
-        <div className={`back ${isOpen ? "open-back" : "closed-back"}`} style={changeColor()}></div>
+        <div
+          className={`back ${isOpen ? "open-back" : "closed-back"}`}
+          style={changeColor()}
+        ></div>
         <div className={`page2 ${isOpen ? "open-page2" : "closed-page2"}`}>
           <div className="page2-content">
             <h1>INTERNATIONAL PASSPORT</h1>
             <div className="page2-container">
-              <img src={data.gender === 0 ? avatarm : avatarf} width={100} />
+              <img src={ data.gender === 0 ? man : woman } width={80} style={{ backgroundColor: '#f0f1f4', padding: '10px', borderRadius: '8px' }} />
               <div className="input-container">
-                <div className="input-end">
+                <div className="input-row">
+                  <div className="input">
+                    <label>Surname </label>
+                    <div className="data">{data.lastname}</div>
+                  </div>
                   <div className="input">
                     <label>CID </label>
                     <div className="data">{data.citizenid}</div>
                   </div>
-                </div>
-                <div className="input">
-                  <label>Surname </label>
-                  <div className="data">{data.lastname}</div>
                 </div>
                 <div className="input">
                   <label>Given name</label>
