@@ -1,4 +1,4 @@
-# Passport Simulation with React, Vite, and TypeScript
+# Passport Simulation with React, Vite, TypeScript and Tailwind CSS.
 
 This project was developed in collaboration with a FiveM city to create a virtual passport that displays players' identity data. The passport features smooth 3D animations for opening and closing, resembling a real-life document.
 
