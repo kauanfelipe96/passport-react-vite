@@ -1,50 +1,36 @@
-# React + TypeScript + Vite
+# Passport Simulation with React, Vite, and TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project was developed in collaboration with a FiveM city to create a virtual passport that displays players' identity data. The passport features smooth 3D animations for opening and closing, resembling a real-life document.
 
-Currently, two official plugins are available:
+It is designed to help authorities and citizens access player information easily, adding an immersive and functional element to the city. This project deepened my expertise in React, TypeScript, and FiveM integration, and it is currently in use within the city.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
 
-## Expanding the ESLint configuration
+- **React**: A JavaScript library for building user interfaces.
+- **Vite**: A lightning-fast build tool for modern web projects.
+- **TypeScript**: Adds static typing to JavaScript, improving code reliability.
+- **Axios**: For backend communication.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
 
-- Configure the top-level `parserOptions` property like this:
+- **3D Passport Simulation**: Smooth animations for opening and closing the document.
+- **Player Identity Display**: Shows detailed identity information for players.
+- **FiveM Integration**: Seamless interaction with the FiveM platform.
+- **Responsive Design**: Optimized for various screen sizes.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## How to Run
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. Clone this repository:
+   ```sh
+   git clone https://github.com/kauanfelipe96/passport-react-vite.git
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+2. Navigate to the project directory:
+   ```sh
+   cd passport-react-vite
+3. Install dependencies:
+   ```sh
+   npm install
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+4. Start the project:
+   ```sh
+   npm run dev
