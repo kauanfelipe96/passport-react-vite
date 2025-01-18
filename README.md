@@ -2,13 +2,14 @@
 
 This project was developed in collaboration with a FiveM city to create a virtual passport that displays players' identity data. The passport features smooth 3D animations for opening and closing, resembling a real-life document.
 
-It is designed to help authorities and citizens access player information easily, adding an immersive and functional element to the city. This project deepened my expertise in React, TypeScript, and FiveM integration, and it is currently in use within the city.
+It is designed to help authorities and citizens access player information easily, adding an immersive and functional element to the city. This project deepened my expertise in React, TypeScript, Tailwind CSS, and FiveM integration, and it is currently in use within the city.
 
 ## Technologies Used
 
 - **React**: A JavaScript library for building user interfaces.
 - **Vite**: A lightning-fast build tool for modern web projects.
 - **TypeScript**: Adds static typing to JavaScript, improving code reliability.
+- **Tailwind CSS**: A utility-first CSS framework for styling the project with ease.
 - **Axios**: For backend communication.
 
 ## Features
