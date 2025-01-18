@@ -19,6 +19,14 @@ It is designed to help authorities and citizens access player information easily
 - **FiveM Integration**: Seamless interaction with the FiveM platform.
 - **Responsive Design**: Optimized for various screen sizes.
 
+## Insights and Learnings 
+
+Working on this project was an exciting challenge that allowed me to:
+
+- Explore React and TypeScript in depth.
+- Learn about 3D animations and smooth transitions.
+- Strengthen integration with FiveM, creating a functional tool for real-time use.
+
 ## How to Run
 
 1. Clone this repository:
